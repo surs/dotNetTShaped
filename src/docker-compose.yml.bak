@@ -160,8 +160,8 @@ services:
   coupon-api:
     image: ${REGISTRY:-eshop}/coupon.api:${PLATFORM:-linux}-${TAG:-latest}
     build:
-      context: .
-      dockerfile: Services/Coupon/Coupon.API/Dockerfile
+    context: .
+    dockerfile: Services/Coupon/Coupon.API/Dockerfile
     depends_on:
       - rabbitmq
       - nosqldata
